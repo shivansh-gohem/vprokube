@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: vpromq01
+spec:
+  
+  ports:
+    - protocol: TCP
+      port: 5672
+      targetPort: vprormq-port
+  selector:
+    app: vpromq  
+  type: ClusterIP
